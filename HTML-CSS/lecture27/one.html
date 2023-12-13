@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,900&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #8BC6EC;
+            /* background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); */
+            background: linear-gradient(to right, #1f4037, #99f2c8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 400px;
+            height: 620px;
+            /* background-color: #fff; */
+            background: linear-gradient(to right, #c2e59c, #64b3f4);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            padding-bottom: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 30%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .textBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 75%;
+            text-align: center;
+        }
+
+        .textBox p{
+            text-align: justify;
+        }
+
+        #amountBox {
+            width: 80%;
+            height: 10%;
+            background-color: #1f403726;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 20px;
+        }
+
+        #leftBox {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .imgBox {
+            display: flex;
+        }
+
+        .imgBox img {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+
+        #paymentButton {
+            width: 80%;
+            height: 9%;
+            background-color: rgb(22, 22, 79);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        #paymentButton:hover {
+            box-shadow: 0px 0px 39px 9px rgba(0, 0, 0, 0.4),
+                0px 25px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .cancelBox a {
+            text-decoration: none;
+            color: rgb(46, 43, 43);
+            font-weight: bold;
+            font-size: large;
+        }
+
+        @media (max-width: 400px) {
+            .card {
+                height: 100%;
+            }
+
+            #amountBox {
+                height: 100%;
+                background-color: rgba(255, 166, 0, 0.473);
+            }
+
+            #amountBox,
+            #leftBox {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="./images/icon.jpg" alt="icon" />
+            <div class="textBox">
+                <h2>Order Summary</h2>
+                <p>Places the order and displays the Order Confirmation page. If order approvals are enabled for the organization and this order requires approval, the order is not submitted for processing until after the order is approved.</p>
+            </div>
+            <div id="amountBox">
+                <div id="leftBox">
+                    <div class="imgBox">
+                        <img src="images/music.png" alt="music" />
+                    </div>
+                    <div class="textAmountBox">
+                        <p>Amount</p>
+                        <p>$99.9/year</p>
+                    </div>
+                </div>
+                <div class="rightBox">
+                    <a href="">Change</a>
+                </div>
+            </div>
+            <button id="paymentButton">Proceed to Payment</button>
+            <div class="cancelBox">
+                <a href="#">Cancel Order</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
